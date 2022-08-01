@@ -16,8 +16,8 @@ class MainForm extends React.Component{
                             required  />        
                 </div>
                 <div>
-                    <label>
-
+                    <label htmlFor="tempo">
+                        Tempo
                     </label>
                     <input  type="time"
                             step="1"
