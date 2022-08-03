@@ -1,33 +1,34 @@
 import React from "react";
 import Button from "../Button";
+import style from './MainForm.module.scss'
 
 class MainForm extends React.Component{
     render() {
         return(
-            <form>
-                <div>
-                    <label htmlFor="tarefa">
-                        Adicione um novo estudo:                     
+            <form className={style.newTask}>
+                <div className={style.inputContainer}>
+                    <label htmlFor="task">
+                        Add a new study:                     
                     </label>                    
-                    <input id="tarefa" 
+                    <input id="task" 
                             type="text" 
-                            name="tarefa" 
-                            placeholder="O que você quer estudar" 
+                            name="task" 
+                            placeholder="What you like study?" 
                             required  />        
                 </div>
-                <div>
+                <div className={style.inputContainer}>
                     <label htmlFor="tempo">
-                        Tempo
+                        Time
                     </label>
                     <input  type="time"
                             step="1"
-                            name="tempo"
-                            id="tempo"
+                            name="time"
+                            id="time"
                             min="00:00:00"
                             max="01:30:00"
                             required />        
                 </div>
-                <Button></Button>
+                <Button texto="Add" />   
             </form>
         )       
     }    
